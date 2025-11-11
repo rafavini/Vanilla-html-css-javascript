@@ -1,0 +1,243 @@
+/* importações */
+
+@import url('/css/variables.css');
+
+/* resetar o css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-mobile {
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.btn-default {
+    background-color: var(--color-primary);
+
+    color: var(--color-neutral-0); 
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a.btn {
+    text-decoration: none;
+}
+
+.btn-outlined{
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid  var(--color-primary);
+}
+
+.btn-outlined:hover{
+    background-color: var(--color-primary);
+    color: var(--color-neutral-0);
+}
+
+.title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#container{
+    background-image: url('../images/background-mobile.png');
+    background-size: contain;
+    height: 400vh;
+
+}
+
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 10px;
+
+    .home-image{
+        width: 300px;
+    }
+
+    .home-title{
+        color: var(--color-neutral-9);
+        text-align: center;
+        font-size: 4rem;
+        text-transform: uppercase;
+        max-width: 650px;        
+    }
+
+    span{
+        color: var(--color-primary);
+    }
+
+
+    .home-description{
+        color: var(--color-neutral-9);
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        max-width: 600px;
+    }
+
+    .home-actions{
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+    }
+}
+
+
+#trendings{
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-top: 100px;
+
+
+    .trendings-cards{
+        .trending-card{
+            position: relative;
+
+            img{
+                width: 300px;
+            }
+
+            .trending-rate{
+                background-color: var(--color-neutral-0);
+                position: absolute;
+                bottom: 70px;
+                right: 30px;
+                padding: 5px 10px;
+                border-radius: 5px;
+
+                i{
+                    color: var(--color-secondary);
+                }
+            }
+
+            .trending-card-description{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: var(--color-neutral-9);
+                    span{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: var(--color-neutral-6);
+                    }
+            }
+        }
+
+    }
+}
+
+#about{
+    padding: 32px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    background-color: var(--color-primary-light);
+    background-image: url('../images/about/bg-about.png');
+    height: 100vh;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+
+    .title{
+        color: var(--color-neutral-0);
+    }
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        .about-img{
+            width: 500px;
+        }
+
+
+        .about-info{
+            padding: 24px;
+            border-radius: 20px;
+            background-color: var(--color-primary-dark);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+
+            h3{
+                color: var(--color-neutral-0);
+                font-size: 1.8rem;
+                margin-bottom: 4px;
+            }
+
+            span{
+                color: var(--color-secondary);
+                font-weight: bold;
+            }
+
+            p{
+                color: var(--color-neutral-0);
+                font-size: 1rem;
+
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    #container{
+        background-image: url('../images/background-desktop.png');
+        background-size: cover;
+        background-position: start;
+        background-repeat: no-repeat;
+    }
+
+    #trendings{
+        .trendings-cards{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+    #about{
+        margin: 4%;
+        justify-content: center;
+        
+
+        .about-content{
+            flex-direction: row;
+            align-items: center;
+            gap: 48px;
+        }
+    }
+}
+
+
+

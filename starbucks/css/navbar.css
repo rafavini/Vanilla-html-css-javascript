@@ -1,0 +1,88 @@
+header {
+    background-color: var(--color-neutral-0);
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    /* sumir com eles para aparecer no mobile */
+    ul {
+        display: none;
+    }
+
+    .btn-default {
+        display: none;
+    }
+
+    /* quando ul estiver com classe show ele vai aparecer o menu, e posicionando
+    o menu em baixo do nav */
+    ul.show {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        background-color: var(--color-neutral-0);
+        left: 0;
+        padding: 1rem;
+    }
+
+    li {
+        /* centralizar os item no meio */
+        text-align: center;
+
+
+        /* adicionar tamanho, cor, bold e animação no link */
+        a {
+            color: var(--color-neutral-9);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+    }
+
+
+    /* adicionar animação quando passa o mouse em cima do link */
+    li a:hover {
+
+        color: var(--color-primary);
+        border-bottom: 1px solid var(--color-primary);
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    header {
+        .navbar {
+            .btn-mobile {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                list-style: none;
+            }
+
+            .btn-default {
+                display: block;
+            }
+        }
+    }
+}
