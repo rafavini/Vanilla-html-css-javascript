@@ -1,0 +1,80 @@
+@import url('../css/variables.css');
+
+
+nav {
+    background-color: var(--color-neutral-0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    /* ultima coisa a fazer */
+    position: fixed; 
+    /* essa também */
+    width: 100%;
+    padding: 12px;
+
+    .logo {
+        width: 180px;
+    }
+
+    .btn-contato{
+        display: none;
+    }
+
+    ul {
+        display: none;
+        list-style: none;
+    }
+
+    ul.show {
+        background-color: var(--color-neutral-0);
+        padding: 10px;
+        display: flex;
+        list-style: none;
+        position: absolute;
+        gap: 10px;
+        width: 100%;
+        left: 0;
+        top: 90px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-neutral-9);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+a:hover{
+    color: var(--color-primary);
+
+}
+
+@media (min-width: 768px){
+    nav{
+        ul{
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-mobile{
+            display: none;
+        }
+
+        .btn-contato{
+            display: block;
+            background-color: var(--color-primary);
+            color: var(--color-neutral-0);
+        }
+        .btn-contato:hover{
+            background-color: var(--color-primary-light);
+
+        }
+    }
+}
